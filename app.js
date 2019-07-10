@@ -37,6 +37,7 @@ function main() {
         })
     }
     
+
     function changePage(event) {
         var url = event.target.attributes.url.value;
         routerInstance.buildDom(url, layoutInstance.main);

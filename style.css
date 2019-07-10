@@ -17,6 +17,7 @@ html {
   
   body {
     color: #111;
+    background-color: #d0d4db;
     font-family: Helvetica, Arial, sans-serif;
     font-size: 16px;
     line-height: 147%;
@@ -39,19 +40,24 @@ html {
   #site-header {
     padding: 30px 0;
     color: white;
-    background: grey;
+    background: #323945;
+    list-style-type: none;
+    
   }
   
   #site-footer {
     color: white;
     padding: 60px 0;
-    background: grey;
+    background: #323945;
   }
   
   #site-main {
     margin-bottom: 60px;
+    margin-left: 70px;
+    
   }
   
+
   .container {
     margin: 0 20px;
   }
@@ -61,6 +67,51 @@ html {
     padding-top: 20px;
   }
   
+  
+  .cards-container {
+    display: flexbox;
+  }
+
+  .flash {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: white;
+    animation: flash 3s ease forwards;
+  }
+
+
+  .bigPhoto {
+    display: flexbox;
+    width: 700px;
+    height: auto;
+    border: 5px solid black;
+    -webkit-box-shadow: 16px 13px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 16px 13px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 16px 13px 5px 0px rgba(0,0,0,0.75);
+    background-color: white;
+    font-family: 'Permanent Marker', cursive;
+    text-align: left;
+  }
+
+  .shoot {
+    position: absolute;
+    z-index: 2;
+  }
+
+  .bigPhoto img {
+    width: 100%;
+    height: auto;
+    border-bottom: 5px solid rgba(0,0,0,0.75);
+  }
+
+  .bigPhoto p {
+    margin-left: 50px;
+    margin-bottom: 10px;
+  }
+
   @media (min-width: 768px) {
     .container {
       max-width: 728px;
@@ -68,8 +119,7 @@ html {
     }
   }
   
-  
-  
+
   
   /* ---- components ---- */
   
@@ -87,3 +137,14 @@ html {
   
   /* ---- section ---- */
   
+
+  /* animations */
+
+  @keyframes flash{
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
