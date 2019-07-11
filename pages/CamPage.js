@@ -13,15 +13,15 @@ CamPage.prototype.generate = async function() {
     await this.connectToAPI();
     this.elements = `
         <div class="flash"></div>
-        <header>
+        <div>
         <h2>DISCOVER NEW PHOTOS!</h2>
-        </header>
+        </div>
         <div>
         <section class="cards-container">
         `;
         this.elements += `
         <div class="bigPhoto">
-        <div class="flashit">
+        <div>
         <img src="${this.photos.download_url}">
         <p><b>Author:</b> ${this.photos.author}</p>
         <p><b>ID:</b> ${this.photos.id}</p>
