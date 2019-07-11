@@ -16,7 +16,7 @@ GalleryPage.prototype.generate = async function() {
     this.elements = `
     <main>
     <h1>GalleryPage</h1>
-    <p>Some photos around here</p>
+    <p>Enjoy this random photos, click on them and scroll with left and right keys to take a better look.</p>
     <div class="gallery">
     `;  
     this.photos = await Promise.all(this.arrayOfImages.map(async () => {

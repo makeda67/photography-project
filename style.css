@@ -17,16 +17,19 @@ html {
   
   body {
     color: #111;
-   
     background-color: #323945;
     font-family: Helvetica, Arial, sans-serif;
     font-size: 16px;
     line-height: 147%;
   }
   
-  h1 {}
+  h1 {
+    font-family: 'Cairo', sans-serif;
+  }
   
-  h2 {}
+  h2 {
+    
+  }
   
   h3 {}
   
@@ -39,7 +42,7 @@ html {
   /* ---- layout ---- */
   
   #site-header {
-    padding: 30px 0;
+    padding: 10px 0;
     color: white;
     background: #323945;
     list-style-type: none;
@@ -68,17 +71,30 @@ html {
 
   .ul-top {
     display: flexbox;
-    align-content: center;
     list-style: none;
     color: white;
+    align-content: space-between;
   }
 
   ul li {
-    display: inline;
-    border: solid white 3px;
+    position: relative;
+    top: 25px;
     text-align: center;
+    right: 10px;
+    display: inline-flex;
+    color: rgba(255, 255, 255, 0.8);
+    background: rgb(100, 100, 100);
+    padding: 15px 40px;
+    border-radius: 4px;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-left: 200px;
     
+    transition: all 0.2s ease-in-out;
+  }
 
+  ul li:hover {
+    box-shadow: 0 5px 15px rgba(252, 252, 252, 0.4)
   }
 
   a:link {

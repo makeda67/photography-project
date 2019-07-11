@@ -36,6 +36,7 @@ CamPage.prototype.generate = async function() {
     
     this.render();
     
+    // this.addListenersToNavbar();
 
     var shootButton = document.querySelector('button');
     var self = this;
@@ -44,6 +45,15 @@ CamPage.prototype.generate = async function() {
       
     });
 }
+
+
+CamPage.prototype.addListenersToNavbar = function () {
+    var anchors = document.querySelectorAll('nav a');
+    anchors.forEach(function(anchor) {
+        anchor.addEventListener('click', changePage);
+    })
+}
+
 
 CamPage.prototype.render = function() {
     this.parentElement.innerHTML = this.elements;
