@@ -17,7 +17,8 @@ html {
   
   body {
     color: #111;
-    background-color: #d0d4db;
+   
+    background-color: #323945;
     font-family: Helvetica, Arial, sans-serif;
     font-size: 16px;
     line-height: 147%;
@@ -49,20 +50,48 @@ html {
   
   #site-footer {
     color: white;
-    padding: 60px 0;
+    padding: 10px 0;
     background: #323945;
   }
   
   #site-main {
     margin-bottom: 60px;
-    margin-left: 70px;
     align-content: center;
     padding: 20px;
+     background-color: #d0d4db;
   }
   
   nav {
     display: flex;
     justify-content: space-between;
+  }
+
+  .ul-top {
+    display: flexbox;
+    align-content: center;
+    list-style: none;
+    color: white;
+  }
+
+  ul li {
+    display: inline;
+    border: solid white 3px;
+    text-align: center;
+    
+
+  }
+
+  a:link {
+    color: white;
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: white;
+  }
+
+  a:hover {
+    color: white;
   }
 
   .container {

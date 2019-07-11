@@ -13,7 +13,6 @@ function GalleryPage(parentElement) {
 GalleryPage.prototype.generate = async function() {
     this.loading = new Loading(this.parentElement);
     this.loading.generate();
-    console.log(this.photos)
     this.elements = `
     <main>
     <h1>GalleryPage</h1>
@@ -24,7 +23,6 @@ GalleryPage.prototype.generate = async function() {
         return await this.connectToAPI();
 
     }))
-    console.log(this.photos)
     this.photos.forEach((photo) => {
         this.elements += `
         <div class="image-container">
