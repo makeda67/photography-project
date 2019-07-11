@@ -60,6 +60,10 @@ html {
     padding: 20px;
   }
   
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
 
   .container {
     margin: 0 20px;
@@ -85,6 +89,10 @@ html {
   .gallery img:hover {
     filter: grayscale(100%);
     transform: scale(1.1);
+  }
+
+  .camPage {
+    font-family: 'Rock Salt', cursive;
   }
 
   .cards-container {

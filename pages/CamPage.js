@@ -13,8 +13,8 @@ CamPage.prototype.generate = async function() {
     await this.connectToAPI();
     this.elements = `
         <div class="flash"></div>
-        <div>
-        <h2>DISCOVER NEW PHOTOS!</h2>
+        <div class="camPage">
+        <h2>DISCOVER &nbsp;&nbsp;NEW&nbsp; PHOTOS!</h2>
         </div>
         <div>
         <section class="cards-container">
