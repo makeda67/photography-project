@@ -159,7 +159,7 @@ html {
 
   .bigPhoto {
     display: flexbox;
-    width: 70%;
+    width: 50%;
     height: auto;
     border: 5px solid black;
     -webkit-box-shadow: 16px 13px 5px 0px rgba(0,0,0,0.75);
