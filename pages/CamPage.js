@@ -36,7 +36,7 @@ CamPage.prototype.generate = async function() {
     
     this.render();
     
-    // this.addListenersToNavbar();
+    
 
     var shootButton = document.querySelector('button');
     var self = this;

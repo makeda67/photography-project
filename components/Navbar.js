@@ -15,7 +15,7 @@ this.elements = `<nav>
     this.links.forEach((link) => {
         this.elements += `
         <li>
-            <a href="#0" url=${link.url}>${link.name}</a>
+            <a href="#0" type="button" url=${link.url}>${link.name}</a>
         </li>`;
     });
     this.elements += `</ul>

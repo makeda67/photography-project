@@ -84,17 +84,19 @@ html {
     display: inline-flex;
     color: rgba(255, 255, 255, 0.8);
     background: rgb(100, 100, 100);
-    padding: 15px 40px;
-    border-radius: 4px;
     font-weight: normal;
     text-transform: uppercase;
     margin-left: 200px;
-    
     transition: all 0.2s ease-in-out;
+    
   }
 
   ul li:hover {
     box-shadow: 0px 0px 30px rgba(252, 252, 252, 0.247)
+  }
+
+  ul li a {
+    padding: 15px 40px;
   }
 
   a:link {
@@ -256,8 +258,10 @@ html {
   @keyframes flash{
     0% {
       opacity: 1;
+      z-index: 10;
     }
     100% {
       opacity: 0;
+      z-index: -1;
     }
   }
