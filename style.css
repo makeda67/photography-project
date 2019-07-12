@@ -78,7 +78,7 @@ html {
 
   ul li {
     position: relative;
-    top: 25px;
+    top: 10px;
     text-align: center;
     right: 10px;
     display: inline-flex;
@@ -94,7 +94,7 @@ html {
   }
 
   ul li:hover {
-    box-shadow: 0 5px 15px rgba(252, 252, 252, 0.4)
+    box-shadow: 0px 0px 30px rgba(252, 252, 252, 0.247)
   }
 
   a:link {
