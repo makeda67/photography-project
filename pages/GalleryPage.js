@@ -23,26 +23,40 @@ GalleryPage.prototype.generate = async function() {
         return await this.connectToAPI();
 
     }))
+
     this.photos.forEach((photo) => {
         this.elements += `
         <div class="image-container">
         <a href="${photo.download_url}" data-lightbox="mygallery"><img src="${photo.download_url}"></a>
         </div>
+ 
         `;
     })
 
-    this.elements += `</div>
+    this.elements += `<button class="shoot-gallery">REFRESH!</button> </div>
         </main>
         `;
     this.render();
+
 }
 
 GalleryPage.prototype.render = function() {
     this.parentElement.innerHTML = this.elements;
+
+    var shootButton = document.querySelector('.shoot-gallery');
+
+    shootButton.addEventListener('click', () => {
+        console.log("click")
+        this.changeImage(this)
+        
+    });
 }
 
 GalleryPage.prototype.connectToAPI = async function() {
     var photo =  await galleryServiceInstance.getAllPhotos();
-    console.log(photo)
     return photo;
+}
+
+GalleryPage.prototype.changeImage = function(self) {
+    self.generate();
 }

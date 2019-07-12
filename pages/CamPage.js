@@ -8,6 +8,7 @@ function CamPage(parentElement) {
 }
 
 CamPage.prototype.generate = async function() {
+ 
     this.loading = new Loading(this.parentElement);
     this.loading.generate();
     await this.connectToAPI();
@@ -35,17 +36,15 @@ CamPage.prototype.generate = async function() {
     
     
     this.render();
-    
-    
-
+   
     var shootButton = document.querySelector('button');
     var self = this;
     shootButton.addEventListener('click', async () => {
         this.changeImage(self)
+  
       
     });
 }
-
 
 CamPage.prototype.addListenersToNavbar = function () {
     var anchors = document.querySelectorAll('nav a');

@@ -99,16 +99,16 @@ html {
     padding: 15px 40px;
   }
 
-  a:link {
+  ul li a:link {
     color: white;
     text-decoration: none;
   }
 
-  a:visited {
+  ul li a:visited {
     color: white;
   }
 
-  a:hover {
+  ul li a:hover {
     color: white;
   }
 
@@ -170,12 +170,54 @@ html {
     text-align: left;
   }
 
+  .shoot-gallery {
+    position: absolute;
+    z-index:0;
+    right: 50%;
+    bottom: 20%;
+    /* right: -80%;
+    top: -350px; */
+    outline:0; 
+    font-size:1em;
+    font-weight:600;
+    background:#fff;
+    border:none;
+    padding:2em 4em;
+    transition:all .3s ease-out; 
+    box-shadow:inset 0 -8px 0 0 rgba(0,0,0,.2),
+      1px 1px 0 0 #20252d,
+      2px 2px 0 0 #20252d,
+      3px 3px 0 0 #20252d,
+      4px 4px 0 0 #20252d,
+      5px 5px 0 0 #20252d,
+      6px 6px 0 0 #20252d,
+      7px 7px 0 0 #20252d,
+      8px 8px 0 0 #20252d,
+      9px 9px 0 0 #20252d,
+      10px 10px 0 0 #20252d,
+      11px 11px 0 0 #20252d,
+      12px 12px 0 0 #20252d;
+  }
+  .shoot-gallery:hover{
+    color:#444;
+  }
+  .shoot-gallery:active{
+    color:#222;
+    box-shadow:inset 0 -4px 0 0 rgba(0,0,0,.2),
+      1px 1px 0 0 #20252d,
+      2px 2px 0 0 #20252d,
+      3px 3px 0 0 #20252d,
+      4px 4px 0 0 #20252d,
+      5px 5px 0 0 #20252d;
+  }
 
   .shoot {
-    position: relative;
+    position: absolute;
     z-index:0;
-    right: -80%;
-    top: -350px;
+    right: 20%;
+    top: 50%;
+    /* right: -80%;
+    top: -350px; */
     outline:0; 
     font-size:1em;
     font-weight:600;
