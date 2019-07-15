@@ -6,17 +6,17 @@ function PhotographyService() {
 
 PhotographyService.prototype.getAllPhotos = async function() {
     //random number hasta 30
-    var randomNumber = Math.floor(Math.random() * 30);
-    var response = await fetch(`${this.baseUrl}?page=${randomNumber}`);
+    const randomNumber = Math.floor(Math.random() * 30);
+    const response = await fetch(`${this.baseUrl}?page=${randomNumber}`);
     
-    var data = await response.json();
+    const data = await response.json();
     
     //random index de 30
-    var randomItem = Math.floor(Math.random()*data.length);
+    const randomItem = Math.floor(Math.random()*data.length);
     
     return data[randomItem];
 }
 
-var photographyServiceInstance = new PhotographyService();
+const photographyServiceInstance = new PhotographyService();
 
 photographyServiceInstance.getAllPhotos();

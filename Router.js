@@ -27,4 +27,4 @@ Router.prototype.generateCamPage = function(parentElement) {
     this.page.generate();
 }
 
-var routerInstance = new Router();
+const routerInstance = new Router();

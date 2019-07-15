@@ -43,7 +43,7 @@ GalleryPage.prototype.generate = async function() {
 GalleryPage.prototype.render = function() {
     this.parentElement.innerHTML = this.elements;
 
-    var shootButton = document.querySelector('.shoot-gallery');
+    const shootButton = document.querySelector('.shoot-gallery');
 
     shootButton.addEventListener('click', () => {
         console.log("click")
@@ -53,7 +53,7 @@ GalleryPage.prototype.render = function() {
 }
 
 GalleryPage.prototype.connectToAPI = async function() {
-    var photo =  await galleryServiceInstance.getAllPhotos();
+    const photo =  await galleryServiceInstance.getAllPhotos();
     return photo;
 }
 

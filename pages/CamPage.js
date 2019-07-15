@@ -37,8 +37,8 @@ CamPage.prototype.generate = async function() {
     
     this.render();
    
-    var shootButton = document.querySelector('button');
-    var self = this;
+    const shootButton = document.querySelector('button');
+    const self = this;
     shootButton.addEventListener('click', async () => {
         this.changeImage(self)
   
@@ -47,7 +47,7 @@ CamPage.prototype.generate = async function() {
 }
 
 CamPage.prototype.addListenersToNavbar = function () {
-    var anchors = document.querySelectorAll('nav a');
+    const anchors = document.querySelectorAll('nav a');
     anchors.forEach(function(anchor) {
         anchor.addEventListener('click', changePage);
     })

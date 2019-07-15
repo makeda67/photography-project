@@ -1,11 +1,11 @@
 'use strict';
 
 function main() {
-    var ENTRY_POINT = '/';
-    var layoutInstance = null;
-    var navbarInstance = null;
-    var rootElement = document.querySelector('#root');
-    var links = [
+    const ENTRY_POINT = '/';
+    let layoutInstance = null;
+    let navbarInstance = null;
+    const rootElement = document.querySelector('#root');
+    const links = [
         {name: 'Gallery', url: '/'}, 
         {name: 'CamPage', url: '/gallery'}
     ];
@@ -31,7 +31,7 @@ function main() {
     }
     
     function addListenersToNavbar() {
-        var anchors = document.querySelectorAll('nav a');
+        const anchors = document.querySelectorAll('nav a');
         anchors.forEach(function(anchor) {
             anchor.addEventListener('click', changePage);
         })
@@ -39,7 +39,7 @@ function main() {
     
 
     function changePage(event) {
-        var url = event.target.attributes.url.value;
+        const url = event.target.attributes.url.value;
         routerInstance.buildDom(url, layoutInstance.main);
     }
 
