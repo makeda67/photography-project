@@ -1,6 +1,6 @@
 'use strict';
 
-function main() {
+const main = () => {
     const ENTRY_POINT = '/';
     let layoutInstance = null;
     let navbarInstance = null;
@@ -10,27 +10,24 @@ function main() {
         {name: 'CamPage', url: '/gallery'}
     ];
 
-    generateLayout();
-    generateNavbar();
-    activateRouter();
-    addListenersToNavbar();
+   
 
 
-    function generateLayout() {
+    const generateLayout = () => {
         layoutInstance = new Layout(rootElement);
         layoutInstance.generate();
     }
     
-    function generateNavbar() {
+    const generateNavbar = () => {
         navbarInstance = new Navbar(layoutInstance.header, links);
         navbarInstance.generate();
     }
     
-    function activateRouter() {
+    const activateRouter = () => {
         routerInstance.buildDom(ENTRY_POINT, layoutInstance.main)
     }
     
-    function addListenersToNavbar() {
+    const addListenersToNavbar = () => {
         const anchors = document.querySelectorAll('nav a');
         anchors.forEach(function(anchor) {
             anchor.addEventListener('click', changePage);
@@ -38,11 +35,15 @@ function main() {
     }
     
 
-    function changePage(event) {
+    const changePage = (event) => {
         const url = event.target.attributes.url.value;
         routerInstance.buildDom(url, layoutInstance.main);
     }
 
+    generateLayout();
+    generateNavbar();
+    activateRouter();
+    addListenersToNavbar();
 };
 
 
