@@ -1,15 +1,19 @@
 'use strict';
 
-function Loading(parentElement) {
-    this.parentElement = parentElement;
-    this.elements = null;
+class Loading {
+    constructor (parentElement) {
+        this.parentElement = parentElement;
+        this.elements = null;  
+    }
+    
+    generate() {
+        this.elements = '<p>TAKING A PICTURE...</p>';
+        this.render();
+    }
+    
+    render() {
+        this.parentElement.innerHTML = this.elements;
+    }
+
 }
 
-Loading.prototype.generate = function() {
-    this.elements = '<p>TAKING A PICTURE...</p>';
-    this.render();
-}
-
-Loading.prototype.render = function() {
-    this.parentElement.innerHTML = this.elements;
-}
